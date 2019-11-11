@@ -15,5 +15,3 @@ console.log('Welcome to NodeJS !!!');
 // For applications like social networks which has a lot of requests coming in at once, nodejs is incredibly fast and efficient
 
 // In nodeJS everything is a reference
-
-
