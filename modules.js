@@ -6,4 +6,4 @@ function printChappie(){
     console.log("Chappie: R")
 }
 
-modules.exports.avatar = printAvatar();
+module.exports.avatar = printAvatar;
