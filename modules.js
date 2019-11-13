@@ -7,3 +7,6 @@ function printChappie(){
 }
 
 module.exports.avatar = printAvatar;
+
+// here we type modules and then type it again when we wanna export them
+// for more efficient way of exporting modules --> check modules2.js

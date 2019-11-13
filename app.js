@@ -22,5 +22,8 @@ console.log('Welcome to NodeJS !!!');
 // local modules (user define): require('<path>/<module name>')
 // core modules: require('<keyword for the module>')
 var movies = require('./modules');
+var movies2 = require('./modules2');
 
 movies.avatar();
+movies2.printAvatar();
+console.log(movies2.favMovie);
