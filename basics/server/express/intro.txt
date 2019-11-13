@@ -6,3 +6,6 @@
 // File --> New Project --> Node.js and NPM --> Node.js Express App
 // OR
 // File --> New Project --> Node.js Express App
+// Select Template engine --> EJS
+// CSS engine --> Plain CSS
+
