@@ -1,0 +1,8 @@
+// #### Web Framework: Express ####
+// entire structure for our projects, in other words how we organize our folders, files
+// it's all set up for you in Express
+
+// set up environment for express in IntelliJIDEA | WebStorm
+// File --> New Project --> Node.js and NPM --> Node.js Express App
+// OR
+// File --> New Project --> Node.js Express App

@@ -1,2 +1,4 @@
 /.idea/
 /node_modules/
+/express/.idea/
+/express/node_modules/
