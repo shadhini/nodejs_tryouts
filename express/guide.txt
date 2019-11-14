@@ -90,3 +90,17 @@ whenever you wanna use plain JavaScript, other than variable, such as loops, swi
 variable assignment
 * whenever a user makes a request foe a page, it looks at js file for the requested page
 * and this js file renders the ejs file while passing variables to it as a JSON object
+
+
+#### Navigation Links ####
+If we manually add navigation links in each page, if new page comes up, we will have to put navigation link for that page in every page
+How to solve this ? ...
+create new directory
+views/templates
+
+@views/templates
+    add header.ejs
+
+then @index.ejs
+        <% include templates/header.ejs %>
+
