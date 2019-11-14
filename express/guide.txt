@@ -1,0 +1,82 @@
+#### Start Server ####
+go to bin/www --> right click and Run , or run using configurations
+--> check http://localhost:3000
+
+
+#### Project Structure ####
+express project
+|
+|-- bin
+|   |-- www.js (startup script: it has bunch of core settings,
+|              create a server, tell it what port to listen to.
+|              kicks off app.js)
+|
+|-- public (files that the users are going to be able to access: anything for the public; not directly related to server files )
+|   |-- images
+|   |-- javascripts
+|   |-- stylesheets
+|
+|-- routes (the brains behind each page)
+|   |      (each different page typically is gonna have its own route file)
+|   |-- index.js
+|   |-- users.js
+|
+|-- views (HTML for each page)
+|   |-- error.ejs
+|   |-- index.ejs
+|
+|-- app.js (core behind your project)
+
+
+EJS vs Jade
+* with ejs we include javascript with little weird symbols (%=)
+  it's plain HTML, and anytime you wanna include variable or JavaScript or anything, in addition to HTTML, you can use these weird little symbols
+* but with Jade it doesn't look like HTML at all, it just looks lika a bunch of words and kind of like Python
+
+
+#### What happens when we run this project ####
+
+1. call startup script (bin/www.js)
+    set up your server
+    basic configuration settings
+    tells what port to listen to
+2. kicks off app.js
+    core foundation of your nodejs project
+    whenever user comes to your website and makes a request, app.js gonna look at that request and depending on the URL
+    figure out how to handle that responds appropriately
+
+## Add New Page ##----------------------------------------------------
+@views directory
+    <new_page>.ejs
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+      </head>
+      <body>
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+      </body>
+    </html>
+
+@routes directory
+    <new_page_name>.js
+    var express = require('express');
+    var router = express.Router();
+
+    /* GET home page. */
+    router.get('/', function(req, res, next) {
+      res.render('new_page', { title: 'Express' }); // renders a view, in this case, views/index.ejs
+    });
+
+    module.exports = router;
+
+@app.js:
+    var newRouter = require('./routes/index');
+
+    app.use('/new', newRouter);
+
+------------------------------------------------------------------
+
+
