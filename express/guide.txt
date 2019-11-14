@@ -104,3 +104,15 @@ views/templates
 then @index.ejs
         <% include templates/header.ejs %>
 
+
+----------------------------------------------
+reformat code --> ctrl + shift + alt + L
+----------------------------------------------
+
+#### Local Variables to App ####
+this pretty much means global variables that you can use anywhere in your entire program
+@app.js
+    app.locals.points = "0,713";
+use @index.ejs
+
+

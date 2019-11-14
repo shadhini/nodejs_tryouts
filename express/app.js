@@ -13,6 +13,9 @@ var aboutRouter = require('./routes/about');
 // responsible for determining how to handle requests
 var app = express();
 
+// local variables to app
+app.locals.points = "8,713";
+
 // setting up how the views are handled
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
