@@ -130,3 +130,35 @@ since it is not a module, we need t give the explicit ath with extension right
               <li><%= item.categoryName %></li>
           <% }); %>
         </ul>
+
+
+#### Passing JSON data Using Routes ####
+app.js file is the manager for your entire application
+    app.locals.videodata = require('./videodata.json')
+here we write a piece of code that is only specific to one single page
+and we're sticking it in the file which is responsible for managing the entire application
+when you have a code which is specific to a single web page then you wanna stick it inside that route
+any code that need to be used in multiple pages, or in entire application, should stick in app.js or some other kind of structure
+
+@categories.js
+    var express = require('express');
+    var router = express.Router();
+
+    var vd = require('../videodata.json');
+
+    /* GET home page. */
+    router.get('/', function(req, res, next) {
+        res.render('categories', {
+            title: 'Categories',
+            name: 'Shadhini',
+            videodata: vd
+        });
+    });
+
+    module.exports = router;
+
+
+------------------------------------------
+2 dots when giving relative directory
+e.g.: '../videodata.json' --> move up a directory
+-------------------------------------------

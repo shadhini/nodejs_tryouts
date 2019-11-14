@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %> <!-- This is EJS: Embedded JavaScript --></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+    <% include templates/header.ejs %>
+    <h3><%= title %></h3>
+    <h4><%= videodata.categoryName %></h4>
+    <ul>
+        <% videodata.categories.forEach(function (item) { %>
+            <li><%= item.categoryName %></li>
+        <% }); %>
+</body>
+</html>
