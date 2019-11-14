@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title><%= title %> <!-- This is EJS: Embedded JavaScript --></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <p>Hello <%= name %> ! </p>
+    <ul>
+        <% for(var i=0; i<5; i++){ %>
+            <li><%= i+1 %> Tuna</li>
+        <% } %>
+    </ul>
   </body>
 </html>

@@ -28,12 +28,6 @@ express project
 |-- app.js (core behind your project)
 
 
-EJS vs Jade
-* with ejs we include javascript with little weird symbols (%=)
-  it's plain HTML, and anytime you wanna include variable or JavaScript or anything, in addition to HTTML, you can use these weird little symbols
-* but with Jade it doesn't look like HTML at all, it just looks lika a bunch of words and kind of like Python
-
-
 #### What happens when we run this project ####
 
 1. call startup script (bin/www.js)
@@ -45,7 +39,7 @@ EJS vs Jade
     whenever user comes to your website and makes a request, app.js gonna look at that request and depending on the URL
     figure out how to handle that responds appropriately
 
-## Add New Page ##----------------------------------------------------
+#### Add New Page ####----------------------------------------------------
 @views directory
     <new_page>.ejs
     <!DOCTYPE html>
@@ -80,3 +74,19 @@ EJS vs Jade
 ------------------------------------------------------------------
 
 
+#### EJS: Embedded JavaScript ####
+EJS vs Jade
+* with ejs we include javascript with little weird symbols (%=)
+  it's plain HTML, and anytime you wanna include variable or JavaScript or anything, in addition to HTTML, you can use these weird little symbols
+* but with Jade it doesn't look like HTML at all, it just looks lika a bunch of words and kind of like Python
+
+
+whenever you want to use a variable
+    <%= [variable name] %>
+
+whenever you wanna use plain JavaScript, other than variable, such as loops, switches, if statements; i.e. basic Java Script
+    <% [JS code] %>
+
+variable assignment
+* whenever a user makes a request foe a page, it looks at js file for the requested page
+* and this js file renders the ejs file while passing variables to it as a JSON object
