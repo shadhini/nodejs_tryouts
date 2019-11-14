@@ -116,3 +116,17 @@ this pretty much means global variables that you can use anywhere in your entire
 use @index.ejs
 
 
+#### JSON data ####
+JSON data is JavaScript object
+Since it is a object it self to assign JSON file to a local variable, we don't need string or anything
+we can directly assign the file
+since it is not a module, we need t give the explicit ath with extension right
+@app.js
+    app.locals.videodata = require('./videodata.json')
+@index.ejs
+    <h3><%= videodata.categoryName %></h3>
+        <ul>
+          <% videodata.categories.forEach(function (item) { %>
+              <li><%= item.categoryName %></li>
+          <% }); %>
+        </ul>

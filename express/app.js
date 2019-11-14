@@ -15,6 +15,7 @@ var app = express();
 
 // local variables to app
 app.locals.points = "8,713";
+app.locals.videodata = require('./videodata.json')
 
 // setting up how the views are handled
 // view engine setup
